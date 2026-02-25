@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
+
+|------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
 |
@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+
 
 /*Route::get('/test', function () {
     return 'Сообщение';
@@ -94,5 +94,5 @@ Route::get('/admin/user/{id}', function ($id) {
 Route::get('/user/profile', function () {
 	return 'profile';
 })->name('profile');
-*/
+
 
