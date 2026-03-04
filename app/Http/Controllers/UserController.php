@@ -1,20 +1,18 @@
 <?php
 	namespace App\Http\Controllers;
-	use Illuminate\Support\Facades\Route;
-
-	Route::get('/user', [UserController::class, 'show']);
-	Route::get('/user/{name}', [UserController::class, 'show']);
-	Route::get('/user/{surname}/{name}', [UserController::class, 'show']);
 
 	class UserController extends Controller
 	{
-			public function show()
+		public function show()
 		{
-			return 'user';
+			return view('user.show',[
+				'title' => 'page title',
+				'name'  => 'https://github.com/',
+				'age'  => '12',
+				'salary'  => '1234',
+			]);
 		}
 		
-
 	}
-
 
 ?>
