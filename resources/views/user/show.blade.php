@@ -48,7 +48,7 @@
     @forelse ($arr as $elem)
 	    <p>{{ $elem }}</p>
     @empty
-	    <p>в массиве нет элементов</p>
+	    <p>в массиве нет элементовв</p>
     @endforelse
 
 
