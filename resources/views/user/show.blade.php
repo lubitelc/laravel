@@ -34,10 +34,22 @@
 		@endif
 	@endforeach
     </ul>
-	@if (count($data)>=1)
+
+	{{--@if (count($data)>=1)
 		<li>{{ $data }}</li>
     @elseif($data>=1)
        <p>{{ $data }}</p>
 	@endif
+
+    @foreach ($users as $user)
+		<li>{{ $user['name'] }} {{ $user['age'] }}</li>
+	@endforeach--}}
+
+    @forelse ($arr as $elem)
+	    <p>{{ $elem }}</p>
+    @empty
+	    <p>в массиве нет элементов</p>
+    @endforelse
+
 
 </x-layout>
