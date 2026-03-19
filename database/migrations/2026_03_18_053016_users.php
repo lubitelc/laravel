@@ -11,9 +11,10 @@ class users extends Migration
      */
     public function up(): void
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::table('posts', function (Blueprint $table) {
 			$table->increments('id');
             $table->string('name');
+            $table->text('text');
 		});
     }
 
