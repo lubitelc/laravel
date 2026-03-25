@@ -11,11 +11,14 @@ class users extends Migration
      */
     public function up(): void
     {
-        Schema::table('posts', function (Blueprint $table) {
-			$table->increments('id');
-            $table->string('name');
-            $table->text('text');
-		});
+        Schema::create('users', function (Blueprint $table) {
+			$table->string('name');
+			$table->string('email');
+			$table->integer('age');
+            $table->integer('salary');
+            $table->dateTime('created_at');
+            $table->dateTime('updated_at');
+        });
     }
 
     /**
@@ -23,6 +26,6 @@ class users extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('users');
     }
 };

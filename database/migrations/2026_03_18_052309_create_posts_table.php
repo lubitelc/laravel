@@ -12,9 +12,11 @@ class CreatePostsTable extends Migration
     public function up(): void
     {
         Schema::create('posts', function (Blueprint $table) {
-            $table->id();
-			$table->string('name');
-			$table->text('text');
+			$table->string('title');
+			$table->string('slug');
+			$table->integer('likes');
+            $table->dateTime('created_at');
+            $table->dateTime('updated_at');
         });
     }
 
