@@ -6,12 +6,8 @@
 	{
 		public function show()
 		{
-			$posts = DB::table('posts')->get();
-			
-			foreach ($posts as $post) {
-				dump($post->title);
-				dump($post->text);
-			}
+			DB::table('posts')->where('id', '>', 5)->dump();
+
 		}
 	}
 ?>

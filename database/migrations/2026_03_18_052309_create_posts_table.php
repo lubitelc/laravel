@@ -12,7 +12,8 @@ class CreatePostsTable extends Migration
     public function up(): void
     {
         Schema::create('posts', function (Blueprint $table) {
-			$table->string('title');
+            $table->id();
+            $table->string('title');
 			$table->string('slug');
 			$table->integer('likes');
             $table->dateTime('created_at');

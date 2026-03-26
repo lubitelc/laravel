@@ -11,8 +11,9 @@ class users extends Migration
      */
     public function up(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-			$table->string('name');
+        Schema::create('users', function (Blueprint $table) {
+			$table->id();
+            $table->string('name');
 			$table->string('email');
 			$table->integer('age');
             $table->integer('salary');
