@@ -6,20 +6,8 @@
 	{
 		public function show()
 		{
-			$users=DB::table('users')
-            ->where('age', '=', 30)
-            ->get();
-            
-            DB::table('users')->where('age', '!=', 30)->get();
-            DB::table('users')->where('age', '>', 30)->get();
-            DB::table('users')->where('age', '<', 30)->get();
-            DB::table('users')->where('age', '<=', 30)->get();
-            DB::table('users')
-            ->where('age', '>', 20)
-            ->where('age', '<', 30)
-            ->get();
-            DB::table('users')
-            ->where('age', '>', 30)
+            $users=DB::table('users')
+            ->where('email', '=', 'vlad@mail.com')
             ->orWhere('id', '>', 4)
             ->get();
 
