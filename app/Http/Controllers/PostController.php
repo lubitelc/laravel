@@ -6,7 +6,10 @@
 	{
 		public function show()
 		{
-			DB::table('users')->where('age', '=', 30)->get();
+			$users=DB::table('users')
+            ->where('age', '=', 30)
+            ->get();
+            
             DB::table('users')->where('age', '!=', 30)->get();
             DB::table('users')->where('age', '>', 30)->get();
             DB::table('users')->where('age', '<', 30)->get();
@@ -16,13 +19,12 @@
             ->where('age', '<', 30)
             ->get();
             DB::table('users')
-            ->where('age', '=', 30)
-            ->orWhere('id', '=', 30)
+            ->where('age', '>', 30)
+            ->orWhere('id', '>', 4)
             ->get();
-            DB::table('users')->where('age', '=', 30)->get();
-            DB::table('users')->where('age', '=', 30)->get();
-            DB::table('users')->where('age', '=', 30)->get();
 
+            
+            dump($users);
         }
 	}
 ?>
