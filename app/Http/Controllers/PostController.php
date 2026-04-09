@@ -7,9 +7,18 @@
 		public function show()
 		{
             $users=DB::table('users')
-            ->where('email', '=', 'vlad@mail.com')
-            ->orWhere('id', '>', 4)
-            ->get();
+            ->inRandomOrder()
+            /**
+            *->orderBy('salary')
+            *->orderBy('age', 'desc')возрастание
+            *->orderBy('age', 'asc')убывание
+            *->oldest()возрастание
+            *->latest()убывание
+            *->where('age', '>', 30)
+            *->oldest()
+            */
+		    ->get();
+
 
             
             dump($users);
