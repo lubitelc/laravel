@@ -8,15 +8,6 @@
 		{
             $users=DB::table('users')
             ->inRandomOrder()
-            /**
-            *->orderBy('salary')
-            *->orderBy('age', 'desc')возрастание
-            *->orderBy('age', 'asc')убывание
-            *->oldest()возрастание
-            *->latest()убывание
-            *->where('age', '>', 30)
-            *->oldest()
-            */
 		    ->get();
 
 
