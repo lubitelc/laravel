@@ -7,7 +7,9 @@
 		public function show()
 		{
             $users=DB::table('users')
-            ->inRandomOrder()
+            ->skip(4)
+			->take(10)
+			->where('age', '>', 30)
 		    ->get();
 
 
