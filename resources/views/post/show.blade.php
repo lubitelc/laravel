@@ -1,10 +1,5 @@
 <x-layout>
-	@foreach ($users as $post)
-		<div>
-			<h2>{{ $post->title }}</h2>
-			<div>
-				{{ $post->text }}
-			</div>
-		</div>
+	@foreach ($post as $post)
+		<li>{{ $post->$title }}</li>
 	@endforeach
 </x-layout>
