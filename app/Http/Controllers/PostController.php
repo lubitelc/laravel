@@ -1,16 +1,15 @@
 <?php
 	namespace App\Http\Controllers;
-	use App\Post;
-	use App\Models\posts;
+	use App\Models\Post;
 	use Illuminate\Http\Request;
 	use Illuminate\Support\Facades\DB;
 
 	class PostController extends Controller
 	{
-		public function getAll()
+		public function index()
 		{
 			$post = Post::all();
-    		return view('post.index', ['posts' => $post]);
+    		return view('posts.index', ['posts' => $post]);
 		}	
         
 	}

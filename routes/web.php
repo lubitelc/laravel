@@ -6,4 +6,4 @@ use App\Http\Controllers\PostController;
 
 Route::get('/user', [UserController::class, 'show']);
 Route::get('/post', [PostController::class, 'show']);
-Route::get('/post/all', [PostController::class, 'getAll']);
+Route::get('/post/all', [PostController::class, 'show']);
