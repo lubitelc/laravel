@@ -6,10 +6,17 @@
 
 	class PostController extends Controller
 	{
+		public function show()
+		{
+			 
+			$posts = Post::all();
+			return view('post.show', ['posts' => $posts]);
+			}
+
 		public function index()
 		{
-			$post = Post::all();
-    		return view('posts.index', ['posts' => $post]);
+			$posts = Post::all();
+    		return view('post.show', ['posts' => $posts]);
 		}	
         
 	}
