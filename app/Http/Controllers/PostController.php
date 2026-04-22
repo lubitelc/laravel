@@ -6,12 +6,13 @@
 
 	class PostController extends Controller
 	{
-		public function show()
+
+		public function getOne()
 		{
 			 
-			$posts = Post::all();
+			$posts = Post::find(1);
 			return view('post.show', ['posts' => $posts]);
-			}
+		}
 
 		public function index()
 		{
