@@ -1,11 +1,7 @@
 <x-layout>
-	<div>
-		<table>
+	<div>		
 	@foreach ($posts as $post)
-	<tr>
-		
-	</tr>
+	<div>{{ $post }}</div>
 	@endforeach
-	</table>
 	</div>
 </x-layout>
