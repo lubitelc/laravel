@@ -7,10 +7,11 @@
 	class PostController extends Controller
 	{
 
-		public function getOne()
+		public function getOne($id)
 		{
 			 
-			$posts = Post::find(1);
+			$posts = Post::find($id);
+			return $posts;
 			return view('post.show', ['posts' => $posts]);
 		}
 

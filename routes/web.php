@@ -7,4 +7,4 @@ use App\Http\Controllers\PostController;
 Route::get('/user', [UserController::class, 'show']);
 Route::get('/post', [PostController::class, 'show']);
 Route::get('/post/all', [PostController::class, 'getALL']);
-Route::get('/post/:id/', [PostController::class, 'getOne']);
+Route::get('/post/{id}/', [PostController::class, 'getOne'])->where('id','[0-9]+');
