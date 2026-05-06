@@ -1,7 +1,18 @@
 <x-layout>
-	<div>		
+	<div>	
+		<table>
+				
 	@foreach ($posts as $post)
-	<div>{{ $post }}</div>
+	<tr>
+		<td>{{ $post->id }}</td>
+		<td>{{ $post->title }}</td>
+		<td>{{ $post->desc }}</td>
+		<td>{{ $post->text }}</td>
+		<td>{{ $post->date }}</td>
+		 
+	</tr>
+	
 	@endforeach
+	</table>
 	</div>
 </x-layout>
