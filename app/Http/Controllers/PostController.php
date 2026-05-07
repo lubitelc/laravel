@@ -6,6 +6,16 @@
 
 	class PostController extends Controller
 	{
+		public function delPost()
+		{
+			$posts = Post::find(1);
+			$posts->delete();
+    		return view('post.show', ['posts' => $posts]);
+		}
+		public function getDeletedPost()
+		{
+			$posts=Post::onlyTrashed()->get();
+		}
 		public function editPost(Request $request, $id)
 		{
 			$post = Post::find($id);
@@ -18,6 +28,7 @@
 				
 				$post->save();
 			}
+			
 			
 			return view('post.new', ['post' => $post]);
 
