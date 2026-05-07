@@ -3,12 +3,14 @@
 	use App\Models\Post;
 	use Illuminate\Http\Request;
 	use Illuminate\Support\Facades\DB;
+	use Illuminate\Database\Eloquent\SoftDeletes;
 
 	class PostController extends Controller
 	{
 		public function delPost()
 		{
 			$posts = Post::find(1);
+			$title=$post->title;
 			$posts->delete();
     		return view('post.show', ['posts' => $posts]);
 		}
